@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Ability Services Home</title>
+    <link rel="icon" href="../static/icons/gas.ico" type="image/x-icon">
+    <!-- Include Bootstrap CSS (you can use a CDN or local CSS file) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand growth" href="#">
+            <img class ="logo-block" src="../static/icons/Growth Ability Services-logos_white.png" alt="Logo" class="d-inline-block align-text-top">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse main-nav" id="navbarNav">
+            <ul class="navbar-nav">
+                <li>
+                    <a class="nav-link blink" href="./index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a class="nav-link blink" href="/patient_management">Patient Management</a>
+                </li>
+                <li>
+                    <a class="nav-link blink" href="/provider_management">Provider Management</a>
+                </li>
+                <li>
+                    <a class="nav-link blink" href="/employee_management">Employee Management</a>
+                </li>
+                <li id="loginLink">
+                    <a class="nav-link blink" href="#">Login</a>
+                </li>
+                <li id="signOutLink" style="display: none;">
+                    <a class="nav-link blink red" href="/">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/icons/One.jpg" class="d-block w-100" alt="...">
+            <div class="overlay">
+                <p class="overlay-text">Query 1</p>
+                <div class="trigger_buttons">
+                        <button type="button" class="btn btn-lg btn-success my_button" data-bs-toggle="modal" data-bs-target="#bluegreen">
+                            Modify Employees
+                        </button>
+                  </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/icons/Two.jpg" class="d-block w-100" alt="...">
+            <div class="overlay">
+                <p class="overlay-text">Query 2</p>
+            </div>
+        </div>
+          <div class="carousel-item">
+            <img src="../static/icons/Three.jpg" class="d-block w-100" alt="...">
+            <div class="overlay">
+                <p class="overlay-text">Query 3</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev pink" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next pink" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <div class="modal fade" id="bluegreen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="pinkgreen" class="table table-bordered table-striped">
+                        <h2 class="table_title">Query</h2>
+                        <thead>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <tbody id="pinkgreenblue"></tbody>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div> -->
+
+<div class="special_queries">
+    <div>
+        <div class="container info_wrapper">
+            <table id="querySevenTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query for Knowing Patients and their Insurance Provider & Payments</h2>
+                <thead>
+                <tr>
+                    <th>Client Id</th>
+                    <th>Client Name</th>
+                    <th>Insurance Provider</th>
+                    <th>Insurance Policy No</th>
+                    <th>Payment Date</th>
+                    <th>Payment Amount</th>
+                </tr>
+                </thead>
+                <tbody id="querySevenTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryEightTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query for Finding the Top Provider with most number of services provided</h2>
+                <thead>
+                    <tr>
+                        <th>Provider Id</th>
+                        <th>Provider First Name</th>
+                        <th>Provider Last Name</th>
+                        <th>Service Type</th>
+                    </tr>
+                </thead>
+                <tbody id="queryEightTableBody"></tbody>
+            </div>
+    </div>
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryNineTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query for Finding the Average Pay According to the Services Provided</h2>
+                <thead>
+                    <tr>
+                        <th>Provider Id</th>
+                        <th>Provider First Name</th>
+                        <th>Provider Last Name</th>
+                        <th>Service Type</th>
+                        <th>Average Hourly Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="queryNineTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryThreeTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query to Find Emergency Contacts of Patients</h2>
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Contact Name</th>
+                        <th>Relationship</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="queryThreeTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryFourTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query to Find about the Employees and their Certifications</h2>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Training Name</th>
+                        <th>Status</th>
+                        <th>Date Completed</th>
+                    </tr>
+                </thead>
+                <tbody id="queryFourTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryFiveTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query for Service Providers on their Start Dates and what services provided</h2>
+                <thead>
+                    <tr>
+                        <th>Provider Id</th>
+                        <th>Provider Name</th>
+                        <th>Services</th>
+                        <th>Service Start Date</th>
+                    </tr>
+                </thead>
+                <tbody id="queryFiveTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="querySixTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query</h2>
+                <thead>
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>Position</th>
+                        <th>Schedule Date</th>
+                        <th>Shift Name</th>
+                        <th>Shift Time</th>
+                    </tr>
+                </thead>
+                <tbody id="querySixTableBody"></tbody>
+            </div>
+    </div>
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryTenTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query</h2>
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Doctor Name</th>
+                        <th>Diagnosis</th>
+                        <th>Medication</th>
+                        <th>Treatment Start Date</th>
+                        <th>Shift Time</th>
+                    </tr>
+                </thead>
+                <tbody id="queryTenTableBody"></tbody>
+            </div>
+    </div>
+
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryOneTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query</h2>
+                <thead>
+                    <tr>
+                        <th>Provider Name</th>
+                        <th>Hours Worked</th>
+                        <th>Hourly Rate</th>
+                        <th>Amount Earned</th>
+                    </tr>
+                </thead>
+                <tbody id="queryOneTableBody"></tbody>
+            </div>
+    </div>
+    <div>
+        <div class="container info_wrapper">
+            <table id="queryTwoTable" class="table table-bordered table-striped">
+                <h2 class="table_title">Query</h2>
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody id="queryTwoTableBody"></tbody>
+            </div>
+    </div>
+</div>
+
+    <script src="../static/scripts/script.js"></script>
+    <!-- Include Bootstrap JS (you can use a CDN or local JS file) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

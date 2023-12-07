@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="../icons/gas.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body class="login-body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand growth" href="#">
+            <img class ="logo-block" src="../static/icons/Growth Ability Services-logos_white.png" alt="Logo" class="d-inline-block align-text-top">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container">
+        <div class="row login_container">
+            <div class="animation_container">
+                <div class="waviy">
+                    <span style="--i:1">G</span>
+                    <span style="--i:2">R</span>
+                    <span style="--i:3">O</span>
+                    <span style="--i:4">W</span>
+                    <span style="--i:5">T</span>
+                    <span style="--i:6">H</span>
+                    <span style="--i:7">.</span>
+    
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">B</span>
+                    <span style="--i:3">I</span>
+                    <span style="--i:4">L</span>
+                    <span style="--i:5">I</span>
+                    <span style="--i:6">T</span>
+                    <span style="--i:7">Y</span>
+                    <span style="--i:8">.</span>
+    
+                    <span style="--i:1">S</span>
+                    <span style="--i:2">E</span>
+                    <span style="--i:3">R</span>
+                    <span style="--i:4">V</span>
+                    <span style="--i:5">I</span>
+                    <span style="--i:6">C</span>
+                    <span style="--i:7">E</span>
+                    <span style="--i:8">S</span>
+                    <span style="--i:9">.</span>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mt-5">
+                <!-- Login Form -->
+                <form action="/login" method="post" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Login</h2>
+                        <!-- Username Input -->
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <!-- Password Input -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-dark btn-block">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and Popper.js (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

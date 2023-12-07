@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.login-body {
+  /* fit the background image in the viewport */
+  background-size: cover;
+  /* set the background image to no-repeat */
+  background-image: url("../icons/background.jpg");
+}
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.main-nav {
+  justify-content: right;
+}
+
+.red {
+  color: red !important;
+}
+
+.blink {
+  cursor: pointer;
+}
+
+tr {
+  text-wrap: nowrap;
+}
+.data_carousel {
+  margin-top: 0 !important;
+  max-width: 100vw;
+  padding: 0;
+}
+
+/* Style for the container */
+/* .container {
+  max-width: 1200px;
+} */
+
+/* Style for the table header */
+#clientsTable thead {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Style for alternating rows in the table body */
+#clientsTable tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover effect on table rows */
+#clientsTable tbody tr:hover {
+  background-color: #e2e6ea;
+}
+
+/* Style for the "Patient Information" heading */
+.table_title {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+.growth {
+  padding-left: 20px;
+}
+
+.info_wrapper {
+  margin: 0 20px;
+  padding: 30px;
+  width: auto;
+  max-width: 100%;
+}
+
+.my_button {
+  width: auto;
+  margin: 30px;
+}
+
+.trigger_buttons {
+  display: flex;
+}
+
+.logo-block {
+  width: auto;
+  max-height: 2.5rem;
+}
+
+.special_queries {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_container {
+  justify-content: end;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* button on hover no background color */
+.pink:hover {
+  background-color: transparent;
+}
+
+.carousel-inner {
+  height: 870px; /* Adjust the height as needed */
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.5); /* Black with 0.5 opacity */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.overlay-button {
+  padding: 10px 20px;
+  background-color: pink; /* Change the color as needed */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
