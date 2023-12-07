@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask import jsonify
 import oracledb
+import os
+
 
 app = Flask(__name__)
 app.secret_key = 'strawhats'
@@ -15,8 +17,14 @@ oracledb.init_oracle_client()
 print(oracledb.clientversion())
 
 def get_db_connection():
-    dsn_t = oracledb.makedsn('navydb.artg.arizona.edu', 1521, 'ORCL')
-    connection = oracledb.connect(user="mis531groupS2P", password="vkpK#$}Z73nn68R", dsn=dsn_t, disable_oob=True)
+    db_user = os.environ.get('DB_USER')
+    db_password = os.environ.get('DB_PASSWORD')
+    db_host = os.environ.get('DB_HOST')
+    db_port = os.environ.get('DB_PORT')
+    db_sid = os.environ.get('DB_SID')
+
+    connection_string = f"{db_user}/{db_password}@{db_host}:{db_port}/{db_sid}"
+    connection = oracledb.connect(connection_string, encoding="UTF-8", nencoding="UTF-8")
     return connection
 
 # Route to render the login form

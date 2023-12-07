@@ -1,3 +1,2 @@
 flask
-cx_Oracle
 oracledb
